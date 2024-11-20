@@ -1,0 +1,33 @@
+name: swiftycompanion
+description: "A new Flutter project."
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+version: 1.0.0
+
+environment:
+  sdk: ^3.5.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+  oauth2: ^2.0.3
+  provider: ^6.1.2
+  fl_chart: ^0.69.0
+  equatable: ^2.0.5
+  flutter_dotenv: ^5.2.1
+  http: ^1.2.2
+  oauth2_client: ^3.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/mock_data/user_data.json
+    - assets/images/green_background.png
+    - assets/images/header.jpg
+    - assets/images/loading.png
+    - assets/.env
+    - assets/web_pages/logout.html
