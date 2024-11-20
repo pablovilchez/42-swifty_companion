@@ -241,7 +241,9 @@ class _ProjectCard extends StatelessWidget {
                                       width: 120,
                                       child: _FormattedSection(
                                         title: 'Closed at:',
-                                        value: attempt.updatedAt.substring(0, 10),
+                                        value: attempt.validated == null
+                                            ? 'not closed'
+                                            : attempt.updatedAt.substring(0, 10),
                                       ),
                                     ),
                                   ],
