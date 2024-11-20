@@ -30,7 +30,11 @@ class UserProvider with ChangeNotifier {
       _isLoading = false;
       _setInitialSelectedCourse();
     } catch (error) {
-      _errorMessage = 'User not found';
+      if (error.toString().contains('User not found')) {
+        _errorMessage = 'User not found';
+      } else {
+        _errorMessage = 'Network error. Please try again later';
+      }
     } finally {
       _isSearching = false;
       _isLoading = false;
